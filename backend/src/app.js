@@ -2,12 +2,11 @@ const path = require('path');
 const dotenv = require('dotenv');
 
 const envPath = path.join(__dirname, '../.env');
-console.log('📁 Loading .env from:', envPath);
-
 const result = dotenv.config({ path: envPath });
 if (result.error) {
-  console.error('❌ .env file not found at:', envPath);
-  process.exit(1);
+  console.log('ℹ️ No .env file found — using system environment variables');
+} else {
+  console.log('📁 Loaded .env from:', envPath);
 }
 
 console.log('🔍 MONGO_URI:', process.env.MONGO_URI ? '✅ Found' : '❌ Missing');
