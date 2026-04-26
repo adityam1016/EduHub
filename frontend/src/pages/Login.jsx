@@ -132,10 +132,6 @@ const Login = () => {
             {errors.password && <span className="error-text">{errors.password}</span>}
           </div>
 
-          {/* Forgot password */}
-          <div className="auth-forgot">
-            <a href="#" className="auth-link-blue">Forgot Password?</a>
-          </div>
 
           {/* Submit */}
           <button
