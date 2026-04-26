@@ -257,18 +257,28 @@ a:hover {
 .input-wrapper .input-icon {
   position: absolute;
   left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--text-muted);
   font-size: 1rem;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: color var(--transition-fast);
 }
 
 .input-wrapper .input-icon-right {
   position: absolute;
   right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--text-muted);
   font-size: 1rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: color var(--transition-fast);
 }
 
