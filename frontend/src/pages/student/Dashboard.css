@@ -1,0 +1,140 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: 24px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 0.4s ease;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.dashboard-greeting {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.dashboard-subtext {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.dashboard-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.dashboard-stats {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.dashboard-section {
+  margin-bottom: 24px;
+}
+
+.dashboard-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.dashboard-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+}
+
+/* CTA Card */
+.dashboard-cta {
+  background: var(--gradient-primary);
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(123, 94, 167, 0.4);
+}
+
+.dashboard-cta-text h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.dashboard-cta-text p {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dashboard-cta-play {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.dashboard-cta-play svg {
+  margin-left: 2px;
+}
+
+/* Quiz grid */
+.dashboard-quizzes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* History */
+.dashboard-history {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .dashboard-page {
+    padding: 16px;
+  }
+
+  .dashboard-greeting {
+    font-size: 1.25rem;
+  }
+
+  .dashboard-stats {
+    gap: 8px;
+  }
+}

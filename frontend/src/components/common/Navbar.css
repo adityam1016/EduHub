@@ -1,0 +1,75 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 16px;
+  z-index: 100;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.bottom-nav-icon {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.bottom-nav-item.active .bottom-nav-icon {
+  color: var(--accent-purple);
+}
+
+.bottom-nav-item:hover .bottom-nav-icon {
+  color: var(--text-secondary);
+}
+
+.bottom-nav-item.active:hover .bottom-nav-icon {
+  color: var(--accent-purple);
+}
+
+/* Center play button */
+.bottom-nav-center {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-top: -20px;
+}
+
+.bottom-nav-center-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 20px rgba(123, 94, 167, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bottom-nav-center-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 28px rgba(123, 94, 167, 0.5);
+}
+
+.bottom-nav-center-btn svg {
+  margin-left: 2px;
+}

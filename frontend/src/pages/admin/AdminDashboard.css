@@ -1,0 +1,143 @@
+.admin-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.admin-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.admin-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.admin-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.admin-card-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Activity list */
+.admin-activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.admin-activity-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.admin-activity-item:last-child {
+  border-bottom: none;
+}
+
+.admin-activity-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-activity-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.admin-activity-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.admin-activity-quiz {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+/* Quiz list */
+.admin-quiz-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.admin-quiz-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.admin-quiz-row:last-child {
+  border-bottom: none;
+}
+
+.admin-quiz-row-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.admin-quiz-row-meta {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.admin-empty-text {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 32px 0;
+}
+
+/* Pill variants */
+.pill-warning {
+  background: rgba(255, 193, 7, 0.15);
+  color: var(--color-warning);
+}
+
+.pill-error {
+  background: rgba(255, 82, 82, 0.15);
+  color: var(--color-error);
+}
+
+@media (max-width: 1024px) {
+  .admin-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-grid-2col {
+    grid-template-columns: 1fr;
+  }
+}

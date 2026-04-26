@@ -1,0 +1,208 @@
+/* Search bar */
+.users-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  color: var(--text-muted);
+}
+
+.users-search-bar input {
+  flex: 1;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.users-search-bar input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Table */
+.users-table-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table thead th {
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-default);
+  background: var(--bg-elevated);
+}
+
+.users-table tbody td {
+  padding: 14px 18px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.users-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.users-table-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.users-table-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.users-table-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.users-table-email {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.users-table-date {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.users-table-actions {
+  display: flex;
+  gap: 6px;
+}
+
+/* Pill variants */
+.pill-admin {
+  background: rgba(123, 94, 167, 0.15);
+  color: var(--accent-purple);
+}
+
+.pill-student {
+  background: rgba(74, 144, 217, 0.15);
+  color: var(--accent-blue);
+}
+
+/* Create User Modal */
+.create-user-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: 20px;
+  padding: 32px;
+  max-width: 440px;
+  width: 90%;
+  animation: slideUp 0.3s ease;
+}
+
+.create-user-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.create-user-subtitle {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.create-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.create-user-roles {
+  display: flex;
+  gap: 10px;
+}
+
+.create-role-chip {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border-default);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.create-role-chip:hover {
+  border-color: var(--text-muted);
+}
+
+.create-role-chip.active-student {
+  border-color: var(--accent-blue);
+  background: rgba(74, 144, 217, 0.1);
+  color: var(--accent-blue);
+}
+
+.create-role-chip.active-admin {
+  border-color: var(--accent-purple);
+  background: rgba(123, 94, 167, 0.1);
+  color: var(--accent-purple);
+}
+
+.create-user-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.manage-delete-btn {
+  color: var(--color-error) !important;
+}
+
+.manage-delete-btn:hover {
+  background: rgba(255, 82, 82, 0.1) !important;
+}
+
+@media (max-width: 768px) {
+  .users-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .users-table {
+    min-width: 600px;
+  }
+}

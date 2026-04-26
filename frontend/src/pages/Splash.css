@@ -1,0 +1,58 @@
+.splash-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  gap: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+.splash-logo-wrapper {
+  animation: glow 2s ease-in-out infinite;
+  border-radius: 24px;
+}
+
+.splash-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 60px rgba(123, 94, 167, 0.3);
+}
+
+.splash-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  margin-top: 8px;
+}
+
+.splash-tagline {
+  font-size: 12px;
+  color: var(--text-secondary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.splash-progress {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 32px;
+}
+
+.splash-progress-fill {
+  height: 100%;
+  background: var(--gradient-progress);
+  border-radius: 999px;
+  transition: width 0.02s linear;
+}
