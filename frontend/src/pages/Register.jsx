@@ -102,16 +102,10 @@ const Register = () => {
           <div className="input-group">
             <label htmlFor="register-name">Full Name</label>
             <div className="input-wrapper">
-              <span className="input-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
-                  <circle cx="12" cy="7" r="4"/>
-                </svg>
-              </span>
               <input
                 id="register-name"
                 type="text"
-                className={`input-with-icon ${errors.name ? 'input-error' : ''}`}
+                className={errors.name ? 'input-error' : ''}
                 placeholder="John Doe"
                 value={formData.name}
                 onChange={handleChange('name')}
@@ -124,16 +118,10 @@ const Register = () => {
           <div className="input-group">
             <label htmlFor="register-email">Email Address</label>
             <div className="input-wrapper">
-              <span className="input-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="4" width="20" height="16" rx="2"/>
-                  <path d="M22 4L12 13L2 4"/>
-                </svg>
-              </span>
               <input
                 id="register-email"
                 type="email"
-                className={`input-with-icon ${errors.email ? 'input-error' : ''}`}
+                className={errors.email ? 'input-error' : ''}
                 placeholder="you@example.com"
                 value={formData.email}
                 onChange={handleChange('email')}
@@ -146,16 +134,10 @@ const Register = () => {
           <div className="input-group">
             <label htmlFor="register-password">Password</label>
             <div className="input-wrapper">
-              <span className="input-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                  <path d="M7 11V7a5 5 0 0110 0v4"/>
-                </svg>
-              </span>
               <input
                 id="register-password"
                 type={showPassword ? 'text' : 'password'}
-                className={`input-with-icon input-with-icon-right ${errors.password ? 'input-error' : ''}`}
+                className={`input-with-icon-right ${errors.password ? 'input-error' : ''}`}
                 placeholder="At least 6 characters"
                 value={formData.password}
                 onChange={handleChange('password')}
@@ -182,15 +164,10 @@ const Register = () => {
           <div className="input-group">
             <label htmlFor="register-confirm">Confirm Password</label>
             <div className="input-wrapper">
-              <span className="input-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-              </span>
               <input
                 id="register-confirm"
                 type={showConfirm ? 'text' : 'password'}
-                className={`input-with-icon input-with-icon-right ${errors.confirmPassword ? 'input-error' : ''}`}
+                className={`input-with-icon-right ${errors.confirmPassword ? 'input-error' : ''}`}
                 placeholder="Repeat your password"
                 value={formData.confirmPassword}
                 onChange={handleChange('confirmPassword')}

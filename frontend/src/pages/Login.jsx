@@ -84,16 +84,10 @@ const Login = () => {
           <div className="input-group">
             <label htmlFor="login-email">Email Address</label>
             <div className="input-wrapper">
-              <span className="input-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="4" width="20" height="16" rx="2"/>
-                  <path d="M22 4L12 13L2 4"/>
-                </svg>
-              </span>
               <input
                 id="login-email"
                 type="email"
-                className={`input-with-icon ${errors.email ? 'input-error' : ''}`}
+                className={errors.email ? 'input-error' : ''}
                 placeholder={selectedRole === 'admin' ? 'admin@eduhub.com' : 'you@example.com'}
                 value={email}
                 onChange={(e) => { setEmail(e.target.value); setErrors(prev => ({...prev, email: ''})); }}
@@ -106,16 +100,10 @@ const Login = () => {
           <div className="input-group">
             <label htmlFor="login-password">Password</label>
             <div className="input-wrapper">
-              <span className="input-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                  <path d="M7 11V7a5 5 0 0110 0v4"/>
-                </svg>
-              </span>
               <input
                 id="login-password"
                 type={showPassword ? 'text' : 'password'}
-                className={`input-with-icon input-with-icon-right ${errors.password ? 'input-error' : ''}`}
+                className={`input-with-icon-right ${errors.password ? 'input-error' : ''}`}
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => { setPassword(e.target.value); setErrors(prev => ({...prev, password: ''})); }}
