@@ -63,17 +63,29 @@ if (!MONGO_URI) {
   process.exit(1);
 }
 
+// Log the MongoDB host (without credentials) for debugging
+try {
+  const url = new URL(MONGO_URI);
+  console.log('🔗 Connecting to MongoDB host:', url.hostname);
+} catch (e) {
+  console.log('🔗 Connecting to MongoDB...');
+}
+
 mongoose
-  .connect(MONGO_URI)
+  .connect(MONGO_URI, {
+    serverSelectionTimeoutMS: 15000,
+    connectTimeoutMS: 15000,
+  })
   .then(() => {
     console.log('✅ MongoDB connected successfully');
-    app.listen(PORT, () => {
-      console.log(`🚀 Server running on http://localhost:${PORT}`);
-      console.log(`   Health check → http://localhost:${PORT}/api/health`);
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`🚀 Server running on port ${PORT}`);
+      console.log(`   Health check → /api/health`);
     });
   })
   .catch((err) => {
     console.error('❌ MongoDB connection error:', err.message);
+    console.error('❌ Full error:', JSON.stringify(err, null, 2));
     process.exit(1);
   });
 
